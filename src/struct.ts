@@ -10,7 +10,7 @@ import BufferReader from "./reader";
 import BufferWriter, {IWriter} from "./writer";
 import StaticWriter from "./staticwriter";
 
-export interface StructConstructor<T extends Struct> {
+export interface StructConstructor<T> {
 	new(...args: any[]): T;
 }
 
