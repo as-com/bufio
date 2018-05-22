@@ -1,48 +1,53 @@
 {
-  "name": "bufio",
-  "version": "0.1.0",
-  "description": "Buffer and serialization utilities for javascript",
-  "keywords": [
-    "buffer",
-    "serialization"
-  ],
-  "license": "MIT",
-  "repository": "git://github.com/bcoin-org/bufio.git",
-  "homepage": "https://github.com/bcoin-org/bufio",
-  "bugs": {
-    "url": "https://github.com/bcoin-org/bufio/issues"
-  },
-  "author": "Christopher Jeffrey <chjjeffrey@gmail.com>",
-  "main": "./lib/bufio.js",
-  "scripts": {
-    "browserify": "browserify -s bufio lib/bufio.js | uglifyjs -c > bufio.js",
-    "clean": "rm -f bufio.js",
-    "lint": "eslint lib/ test/ || exit 0",
-    "test": "mocha --reporter spec test/*-test.js",
-    "webpack": "webpack --config webpack.config.js"
-  },
-  "dependencies": {
-    "n64": "~0.1.1"
-  },
-  "devDependencies": {
-	  "@types/node": "^10.1.2",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-	  "babelify": "^8.0.0",
-    "browserify": "^16.1.1",
-    "eslint": "^4.18.2",
-    "mocha": "^5.0.4",
-    "uglify-es": "^3.3.9",
-	  "uglifyjs-webpack-plugin": "^1.2.3",
-    "webpack": "^4.1.1"
-  },
-  "engines": {
-    "node": ">=7.6.0"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  }
+	"name": "@as-com/bufio",
+	"version": "0.2.1",
+	"description": "Buffer and serialization utilities for TypeScript",
+	"keywords": [
+		"buffer",
+		"serialization"
+	],
+	"license": "MIT",
+	"repository": "git://github.com/as-com/bufio.git",
+	"homepage": "https://github.com/as-com/bufio",
+	"bugs": {
+		"url": "https://github.com/as-com/bufio/issues"
+	},
+	"author": "Andrew Sun <me@andrewsun.com>",
+	"main": "./lib/bufio.js",
+	"scripts": {
+		"browserify": "browserify -s bufio lib/bufio.js | uglifyjs -c > bufio.js",
+		"clean": "rm -f bufio.js",
+		"lint": "eslint lib/ test/ || exit 0",
+		"test": "mocha --reporter spec test/*-test.js",
+		"webpack": "webpack --config webpack.config.js"
+	},
+	"files": [
+		"lib",
+		"LICENSE",
+		"README.md"
+	],
+	"dependencies": {
+		"n64": "~0.1.1"
+	},
+	"devDependencies": {
+		"@types/node": "^10.1.2",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.4",
+		"babel-preset-env": "^1.6.1",
+		"babelify": "^8.0.0",
+		"browserify": "^16.1.1",
+		"eslint": "^4.18.2",
+		"mocha": "^5.0.4",
+		"uglify-es": "^3.3.9",
+		"uglifyjs-webpack-plugin": "^1.2.3",
+		"webpack": "^4.1.1"
+	},
+	"engines": {
+		"node": ">=7.6.0"
+	},
+	"browserify": {
+		"transform": [
+			"babelify"
+		]
+	}
 }
