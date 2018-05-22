@@ -40,7 +40,7 @@ export default class Struct {
 		return -1;
 	}
 
-	write(bw: IWriter, extra?) {
+	write(bw: IWriter, extra?): any {
 		return bw;
 	}
 
@@ -139,35 +139,35 @@ export default class Struct {
      * Static API
      */
 
-	static read<T extends Struct, C extends StructConstructor<T>>(this: C, br: BufferReader, extra?): T {
+	static read<T extends Struct>(this: { new(...args: any[]): T }, br: BufferReader, extra?): T {
 		return new this().read(br, extra);
 	}
 
-	static decode<T extends Struct, C extends StructConstructor<T>>(this: C, data: Buffer, extra?): T {
+	static decode<T extends Struct>(this: { new(...args: any[]): T }, data: Buffer, extra?): T {
 		return new this().decode(data, extra);
 	}
 
-	static fromHex<T extends Struct, C extends StructConstructor<T>>(this: C, str: string, extra?): T {
+	static fromHex<T extends Struct>(this: { new(...args: any[]): T }, str: string, extra?): T {
 		return new this().fromHex(str, extra);
 	}
 
-	static fromBase64<T extends Struct, C extends StructConstructor<T>>(this: C, str: string, extra?): T {
+	static fromBase64<T extends Struct>(this: { new(...args: any[]): T }, str: string, extra?): T {
 		return new this().fromBase64(str, extra);
 	}
 
-	static fromString<T extends Struct, C extends StructConstructor<T>>(this: C, str: string, extra?): T {
+	static fromString<T extends Struct>(this: { new(...args: any[]): T }, str: string, extra?): T {
 		return new this().fromString(str, extra);
 	}
 
-	static fromJSON<T extends Struct, C extends StructConstructor<T>>(this: C, json: any, extra?): T {
+	static fromJSON<T extends Struct>(this: { new(...args: any[]): T }, json: any, extra?): T {
 		return new this().fromJSON(json, extra);
 	}
 
-	static fromOptions<T extends Struct, C extends StructConstructor<T>>(this: C, options: any, extra?): T {
+	static fromOptions<T extends Struct>(this: { new(...args: any[]): T }, options: any, extra?): T {
 		return new this().fromOptions(options, extra);
 	}
 
-	static from<T extends Struct, C extends StructConstructor<T>>(this: C, options: any, extra?): T {
+	static from<T extends Struct>(this: { new(...args: any[]): T }, options: any, extra?): T {
 		return new this().from(options, extra);
 	}
 
