@@ -4,8 +4,8 @@
 'use strict';
 
 const assert = require('./util/assert');
-const {U64, I64} = require('n64');
-const encoding = require('../lib/encoding');
+const {U64, I64_t} = require('n64');
+const encoding = require('../src/encoding');
 
 const unsigned = [
   new U64('ffeeffee', 16),
