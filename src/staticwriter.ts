@@ -547,9 +547,3 @@ export default class StaticWriter implements IWriter {
 		return this;
 	}
 }
-
-/*
- * Expose
- */
-
-module.exports = StaticWriter;
