@@ -1,6 +1,6 @@
 {
 	"name": "@as-com/bufio",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"description": "Buffer and serialization utilities for TypeScript",
 	"keywords": [
 		"buffer",
@@ -14,6 +14,7 @@
 	},
 	"author": "Andrew Sun <me@andrewsun.com>",
 	"main": "./lib/bufio.js",
+	"types": "./lib/bufio.d.ts",
 	"scripts": {
 		"browserify": "browserify -s bufio lib/bufio.js | uglifyjs -c > bufio.js",
 		"clean": "rm -f bufio.js",
