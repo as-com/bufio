@@ -7,22 +7,23 @@
 'use strict';
 
 import * as encoding from "./encoding";
-import EncodingError from "./error";
-import BufferReader from "./reader";
-import BufferWriter from "./writer";
-import StaticWriter from "./staticwriter";
-import SizeWriter from "./sizewriter";
-import HashWriter from "./hashwriter";
-import Struct from "./struct";
+
+import BufferReader from './reader';
+import StaticWriter from './staticwriter';
+import BufferWriter from './writer';
+import SizeWriter from './sizewriter';
+import HashWriter from './hashwriter';
+
+
+export {default as EncodingError} from "./error";
+export {default as BufferReader} from "./reader";
+export {default as BufferWriter} from "./writer";
+export {default as StaticWriter} from "./staticwriter";
+export {default as SizeWriter} from "./sizewriter";
+export {default as HashWriter} from "./hashwriter";
+export {default as Struct} from "./struct";
 
 export {encoding}
-export {EncodingError}
-export {BufferReader}
-export {BufferWriter}
-export {StaticWriter}
-export {SizeWriter}
-export {HashWriter}
-export {Struct}
 
 export function read(data, zeroCopy) {
 	return new BufferReader(data, zeroCopy);
