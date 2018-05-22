@@ -56,7 +56,7 @@ export default class Struct {
 		return this;
 	}
 
-	getJSON() {
+	getJSON(): any {
 		return this;
 	}
 
