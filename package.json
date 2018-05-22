@@ -1,6 +1,6 @@
 {
 	"name": "@as-com/bufio",
-	"version": "0.2.10",
+	"version": "0.2.11",
 	"description": "Buffer and serialization utilities for TypeScript",
 	"keywords": [
 		"buffer",

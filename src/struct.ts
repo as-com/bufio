@@ -27,8 +27,8 @@ export default class Struct {
 		return this.decode(obj.encode());
 	}
 
-	clone() {
-		const copy = new Struct();
+	clone(): this {
+		const copy = new (<any> this.constructor)() as this;
 		return copy.inject(this);
 	}
 
