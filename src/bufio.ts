@@ -25,17 +25,19 @@ export {default as Struct} from "./struct";
 
 export {encoding}
 
-export function read(data, zeroCopy) {
+export function read(data: Buffer, zeroCopy?: boolean) {
 	return new BufferReader(data, zeroCopy);
 }
 
-export function write(size) {
+export function write(): BufferWriter
+export function write(size: number): StaticWriter
+export function write(size?: number) {
 	return size != null
 		? new StaticWriter(size)
 		: new BufferWriter();
 }
 
-export function pool(size) {
+export function pool(size: number) {
 	return StaticWriter.pool(size);
 }
 
